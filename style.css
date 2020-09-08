@@ -1,0 +1,91 @@
+:root {
+	/* color */
+	--color-black: #3f454d;
+	--color-white: #ffffff;
+	--color-blue: #3b88c3;
+	--color-yellow: #fbbe28;
+	--color-pink: #fd7f84;
+	--color-light-grey: #dfdfdf;
+}
+
+body {
+	background-color: var(--color-black);
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+/* 동시 2개 지정 시 , 로 구분! */
+.nav,
+.section {
+	background-color: transparent;
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	/* 절대 기준이 없으면 space-around, space-between, flex-end 등 모두 제대로 셋팅되지 않음.
+  시작점 및 기준이 없기 때문. %는 상대비율이기 때문에 기준이 되지 못한다. */
+	margin: 0;
+	padding: 0;
+}
+
+.nav__logo {
+	max-width: 100%;
+	margin-top: 3em;
+}
+
+.nav__logo > img {
+	max-width: 100%;
+}
+
+.nav__menu {
+	list-style: none;
+	padding: 0;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+	align-items: center;
+	width: 25em;
+	max-width: 25em;
+}
+
+.nav__menu > li > img {
+	max-width: 52px;
+	padding: 5px;
+}
+
+.btn {
+	border-radius: 0.2em;
+	border: none;
+	padding: 8px 12px;
+	margin: 0 5px;
+}
+
+.nav__button-blue {
+	background-color: var(--color-blue);
+}
+.nav__button-yellow {
+	background-color: var(--color-yellow);
+}
+.nav__button-pink {
+	background-color: var(--color-pink);
+}
+
+.section__list {
+	width: 26em;
+	max-width: 26em;
+	height: 35em;
+}
+.section__item {
+	background-color: var(--color-white);
+	display: block;
+	height: 4em;
+	border-radius: 0.3em;
+	width: 100%;
+	max-width: 100%;
+}

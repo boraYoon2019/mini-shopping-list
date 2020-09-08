@@ -1,0 +1,218 @@
+[
+	{
+		"product": "p",
+		"forWhom": "female",
+		"size": "large",
+		"color": "yellow"
+	},
+	{
+		"product": "s",
+		"forWhom": "female",
+		"size": "large",
+		"color": "yellow"
+	},
+	{
+		"product": "t",
+		"forWhom": "female",
+		"size": "large",
+		"color": "yellow"
+	},
+	{
+		"product": "p",
+		"forWhom": "male",
+		"size": "large",
+		"color": "yellow"
+	},
+	{
+		"product": "s",
+		"forWhom": "male",
+		"size": "large",
+		"color": "yellow"
+	},
+	{
+		"product": "t",
+		"forWhom": "male",
+		"size": "large",
+		"color": "yellow"
+	},
+	{
+		"product": "p",
+		"forWhom": "female",
+		"size": "large",
+		"color": "pink"
+	},
+	{
+		"product": "s",
+		"forWhom": "female",
+		"size": "large",
+		"color": "pink"
+	},
+	{
+		"product": "t",
+		"forWhom": "female",
+		"size": "large",
+		"color": "pink"
+	},
+	{
+		"product": "p",
+		"forWhom": "male",
+		"size": "large",
+		"color": "pink"
+	},
+	{
+		"product": "s",
+		"forWhom": "male",
+		"size": "large",
+		"color": "pink"
+	},
+	{
+		"product": "t",
+		"forWhom": "male",
+		"size": "large",
+		"color": "pink"
+	},
+	{
+		"product": "p",
+		"forWhom": "female",
+		"size": "large",
+		"color": "blue"
+	},
+	{
+		"product": "s",
+		"forWhom": "female",
+		"size": "large",
+		"color": "blue"
+	},
+	{
+		"product": "t",
+		"forWhom": "female",
+		"size": "large",
+		"color": "blue"
+	},
+	{
+		"product": "p",
+		"forWhom": "male",
+		"size": "large",
+		"color": "blue"
+	},
+	{
+		"product": "s",
+		"forWhom": "male",
+		"size": "large",
+		"color": "blue"
+	},
+	{
+		"product": "t",
+		"forWhom": "male",
+		"size": "large",
+		"color": "blue"
+	},
+	{
+		"product": "p",
+		"forWhom": "female",
+		"size": "small",
+		"color": "yellow"
+	},
+	{
+		"product": "s",
+		"forWhom": "female",
+		"size": "small",
+		"color": "yellow"
+	},
+	{
+		"product": "t",
+		"forWhom": "female",
+		"size": "small",
+		"color": "yellow"
+	},
+	{
+		"product": "p",
+		"forWhom": "male",
+		"size": "small",
+		"color": "yellow"
+	},
+	{
+		"product": "s",
+		"forWhom": "male",
+		"size": "small",
+		"color": "yellow"
+	},
+	{
+		"product": "t",
+		"forWhom": "male",
+		"size": "small",
+		"color": "yellow"
+	},
+	{
+		"product": "p",
+		"forWhom": "female",
+		"size": "small",
+		"color": "pink"
+	},
+	{
+		"product": "s",
+		"forWhom": "female",
+		"size": "small",
+		"color": "pink"
+	},
+	{
+		"product": "t",
+		"forWhom": "female",
+		"size": "small",
+		"color": "pink"
+	},
+	{
+		"product": "p",
+		"forWhom": "male",
+		"size": "small",
+		"color": "pink"
+	},
+	{
+		"product": "s",
+		"forWhom": "male",
+		"size": "small",
+		"color": "pink"
+	},
+	{
+		"product": "t",
+		"forWhom": "male",
+		"size": "small",
+		"color": "pink"
+	},
+	{
+		"product": "p",
+		"forWhom": "female",
+		"size": "small",
+		"color": "blue"
+	},
+	{
+		"product": "s",
+		"forWhom": "female",
+		"size": "small",
+		"color": "blue"
+	},
+	{
+		"product": "t",
+		"forWhom": "female",
+		"size": "small",
+		"color": "blue"
+	},
+	{
+		"product": "p",
+		"forWhom": "male",
+		"size": "small",
+		"color": "blue"
+	},
+	{
+		"product": "s",
+		"forWhom": "male",
+		"size": "small",
+		"color": "blue"
+	},
+	{
+		"product": "t",
+		"forWhom": "male",
+		"size": "small",
+		"color": "blue"
+	}
+]

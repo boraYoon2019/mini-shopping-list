@@ -1,6 +1,3 @@
-// 받아올 json data
-
-// 바로 실행되는 함수로 데이터 받아오는 로직 작성
 // A basic fetch request is really simple to set up. Have a look at the following code:
 // 출처: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
 fetch('data/data.json')
@@ -11,21 +8,28 @@ fetch('data/data.json')
 	});
 
 function addClick(clothes_data) {
+	// 쿼리 실렉터로 nav의 버튼들의 node를 받아온다
 	let sortingButton = document.querySelectorAll('.nav__menu-item');
 
+	// 클릭 리스너 연결
 	sortingButton.forEach((button) => {
 		button.addEventListener('click', () => {
+			// 클릭 이벤트 발생하면, 기존에 리스트에 있던 옷들을 전부 삭제 후, 새로운 옷들을 더해준다.
 			let item = document.querySelectorAll('.section__item');
 
 			item.forEach((section__item) => {
 				section__item.parentNode.removeChild(section__item);
 			});
 
+			// 새로운 아이템들을 기준에 맞게 정렬해주는 함수
 			sortClothes(clothes_data, button.id);
 		});
 	});
 }
 
+// 새로운 아이템들을 기준에 맞게 정렬해주는 함수
+// 데이터 어레이와 기준을 함께 넣어주면, 기준에 맞게 정렬한 어레이를 다시 만들어주고,
+// 새로만든 어레이를 인자로 넣어, 화면에 옷 리스트들을 그려주는 함수를 호출한다.
 function sortClothes(clothes_data, standard) {
 	let sortedArray = new Array();
 
@@ -66,6 +70,8 @@ function sortClothes(clothes_data, standard) {
 	}
 }
 
+// 화면에 옷 리스트들을 그려주는 함수
+// 그려줄 데이터 어레이를 인자로 받음.
 function makeClothesList(sortedArray) {
 	// console.log(array);
 	let clothesList = document.querySelector('.section__list');

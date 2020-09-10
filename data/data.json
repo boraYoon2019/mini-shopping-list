@@ -1,218 +1,254 @@
 [
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "female",
 		"size": "large",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "female",
 		"size": "large",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "female",
 		"size": "large",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "male",
 		"size": "large",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "male",
 		"size": "large",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "male",
 		"size": "large",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "female",
 		"size": "large",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "female",
 		"size": "large",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "female",
 		"size": "large",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "male",
 		"size": "large",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "male",
 		"size": "large",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "male",
 		"size": "large",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "female",
 		"size": "large",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "female",
 		"size": "large",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "female",
 		"size": "large",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "male",
 		"size": "large",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "male",
 		"size": "large",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "male",
 		"size": "large",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "female",
 		"size": "small",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "female",
 		"size": "small",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "female",
 		"size": "small",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "male",
 		"size": "small",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "male",
 		"size": "small",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "male",
 		"size": "small",
-		"color": "yellow"
+		"color": "yellow",
+		"imageURI": "img/yellow_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "female",
 		"size": "small",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "female",
 		"size": "small",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "female",
 		"size": "small",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "male",
 		"size": "small",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "male",
 		"size": "small",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "male",
 		"size": "small",
-		"color": "pink"
+		"color": "pink",
+		"imageURI": "img/pink_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "female",
 		"size": "small",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "female",
 		"size": "small",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "female",
 		"size": "small",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_t.png"
 	},
 	{
-		"product": "p",
+		"product": "pants",
 		"forWhom": "male",
 		"size": "small",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_p.png"
 	},
 	{
-		"product": "s",
+		"product": "skirt",
 		"forWhom": "male",
 		"size": "small",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_s.png"
 	},
 	{
-		"product": "t",
+		"product": "tshirts",
 		"forWhom": "male",
 		"size": "small",
-		"color": "blue"
+		"color": "blue",
+		"imageURI": "img/blue_t.png"
 	}
 ]

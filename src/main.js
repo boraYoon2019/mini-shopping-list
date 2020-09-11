@@ -30,6 +30,11 @@ function addClick(clothes_data) {
 // 새로운 아이템들을 기준에 맞게 정렬해주는 함수
 // 데이터 어레이와 기준을 함께 넣어주면, 기준에 맞게 정렬한 어레이를 다시 만들어주고,
 // 새로만든 어레이를 인자로 넣어, 화면에 옷 리스트들을 그려주는 함수를 호출한다.
+
+// self-feeback :
+// standard 자체를 한번 더 카테고리로 나눴으면, 똑같은 로직을 값에따라 이렇게 번거롭게 switch문 여러개로 작성할 필요 없었을 듯.
+// dataset 이용하자! data-key, data-value
+
 function sortClothes(clothes_data, standard) {
 	let sortedArray = new Array();
 
@@ -72,27 +77,31 @@ function sortClothes(clothes_data, standard) {
 
 // 화면에 옷 리스트들을 그려주는 함수
 // 그려줄 데이터 어레이를 인자로 받음.
+
+// self-feeback :
+// 직접 element를 만들어서 넣었다가, 지웠다가 하는건 직접 돔 조작이랑 다를바 없음.. 지양하자
 function makeClothesList(sortedArray) {
 	// console.log(array);
-	let clothesList = document.querySelector('.list');
+	const clothesList = document.querySelector('.list');
+
+	const list = document.createElement('li');
+	const img = document.createElement('img');
+	const detail = document.createElement('span');
 
 	for (cloth of sortedArray) {
-		let forWhom = cloth.forWhom;
-		let size = cloth.size;
-		let imageURI = cloth.imageURI;
+		const forWhom = cloth.forWhom;
+		const size = cloth.size;
+		const imageURI = cloth.imageURI;
 
-		let list = document.createElement('li');
 		list.className = 'list__item';
 
-		let img = document.createElement('img');
 		img.className = 'list__item-thumbnail';
 		img.src = imageURI;
 
 		list.appendChild(img);
 
-		let detail = document.createElement('span');
 		detail.className = 'list__item-detail';
-		let explanation = document.createTextNode(`${forWhom}, ${size} size`);
+		const explanation = document.createTextNode(`${forWhom}, ${size} size`);
 		detail.appendChild(explanation);
 
 		list.appendChild(detail);

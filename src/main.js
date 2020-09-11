@@ -77,9 +77,9 @@ function sortClothes(clothes_data, standard) {
 
 // 화면에 옷 리스트들을 그려주는 함수
 // 그려줄 데이터 어레이를 인자로 받음.
-
 // self-feeback :
 // 직접 element를 만들어서 넣었다가, 지웠다가 하는건 직접 돔 조작이랑 다를바 없음.. 지양하자
+// for 문 내에서 선언될 필요가 없는 변수들은 for문 밖으로 빼서 반복 선언할당 줄이자.
 function makeClothesList(sortedArray) {
 	// console.log(array);
 	const clothesList = document.querySelector('.list');
@@ -88,20 +88,21 @@ function makeClothesList(sortedArray) {
 	const img = document.createElement('img');
 	const detail = document.createElement('span');
 
+	list.className = 'list__item';
+	img.className = 'list__item-thumbnail';
+	detail.className = 'list__item-detail';
+
 	for (cloth of sortedArray) {
 		const forWhom = cloth.forWhom;
 		const size = cloth.size;
 		const imageURI = cloth.imageURI;
 
-		list.className = 'list__item';
-
-		img.className = 'list__item-thumbnail';
 		img.src = imageURI;
 
 		list.appendChild(img);
 
-		detail.className = 'list__item-detail';
 		const explanation = document.createTextNode(`${forWhom}, ${size} size`);
+
 		detail.appendChild(explanation);
 
 		list.appendChild(detail);

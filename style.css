@@ -6,43 +6,31 @@
 	--color-yellow: #fbbe28;
 	--color-pink: #fd7f84;
 	--color-light-grey: #dfdfdf;
-}
 
-html,
-body {
-	background-color: var(--color-black);
-	margin: 0;
-	padding: 0;
+	/* size */
+	--size-button: 60px;
+	--base-space: 8px;
+	--font-size: 18px;
+	--size-border: 4px;
+	--size-thumbnail: 55px;
+
+	/* animation */
+	--animation-duration: 300ms;
 }
 
 * {
 	box-sizing: border-box;
 }
-.nav,
-.section {
-	position: relative;
+
+body {
+	height: 100vh;
+	/* 절대 기준(width, height)이 없으면 space-around, space-between, flex-end 등 모두 제대로 셋팅되지 않음.
+  시작점 및 기준이 없기 때문. %는 상대비율이기 때문에 기준이 되지 못한다. */
 	background-color: var(--color-black);
 	display: flex;
-	flex-flow: column nowrap;
-	justify-content: space-around;
+	flex-direction: column;
+	justify-content: center;
 	align-items: center;
-	width: 100%;
-	height: 100%;
-	/* 절대 기준이 없으면 space-around, space-between, flex-end 등 모두 제대로 셋팅되지 않음.
-  시작점 및 기준이 없기 때문. %는 상대비율이기 때문에 기준이 되지 못한다. */
-}
-
-.section {
-	padding: 0 0 5em 0;
-}
-
-.nav__logo {
-	max-width: 100%;
-	margin-top: 5em;
-}
-
-.nav__logo > img {
-	max-width: 100%;
 }
 
 ul {
@@ -50,61 +38,72 @@ ul {
 	margin: 0;
 	padding: 0;
 }
-
 .nav__menu {
+	/* button 모임 */
 	display: flex;
-	flex-flow: row nowrap;
-	justify-content: space-around;
 	align-items: center;
-	width: 25em;
-	max-width: 25em;
-	margin: 1em 0 0.5em 0;
-}
-
-.nav__menu > li > img {
-	max-width: 52px;
-	padding: 5px;
 }
 
 .btn {
+	background-color: transparent;
 	border-radius: 0.2em;
 	border: none;
-	padding: 8px 12px;
-	margin: 0 5px;
+	outline: none;
+	cursor: pointer;
+	margin-right: var(--base-space);
+}
+/* 마우스 올렸을 때 커지는 애니메이션 효과 */
+.btn:hover,
+.nav__logo:hover {
+	cursor: pointer;
+	transform: scale(1.1);
+	transition: transform var(--animation-duration) ease;
 }
 
-.nav__button-blue {
+.imgBtn {
+	width: var(--size-button);
+	height: var(--size-button);
+}
+.textBtn {
+	font-size: var(--font-size);
+	padding: calc(var(--base-space) * 2);
+	border-radius: var(--size-border);
+}
+
+.btn-blue {
 	background-color: var(--color-blue);
 }
-.nav__button-yellow {
+.btn-yellow {
 	background-color: var(--color-yellow);
 }
-.nav__button-pink {
+.btn-pink {
 	background-color: var(--color-pink);
 }
 
-.section__list {
-	width: 26em;
-	max-width: 26em;
-	height: 38em;
-	display: flexbox;
-	overflow: auto;
+.list {
+	width: 60%;
+	height: 60%;
+	list-style: none;
+	padding-left: 0;
+	/* overflow: auto; */
+	overflow-y: scroll;
 }
-.section__item {
+
+.list__item {
 	background-color: var(--color-white);
 	display: flex;
-	justify-content: row nowrap;
 	align-items: center;
-	height: 4em;
-	border-radius: 0.3em;
-	width: 26em;
-	max-width: 25.6em;
-	margin: 0.2em;
+	padding: var(--base-space);
+	margin-bottom: var(--base-space);
 }
-.section__item > img {
-	max-width: 3.2em;
-	margin: 0.4em;
+.list__item-thumbnail {
+	width: var(--size-thumbnail);
+	height: var(--size-thumbnail);
 }
-.section__item-detail {
-	margin: 0.5em;
+.list__item-detail {
+	margin-left: var(--base-space);
+	font-size: var(--font-size);
+}
+.invisible {
+	display: none;
 }

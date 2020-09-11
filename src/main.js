@@ -9,16 +9,16 @@ fetch('data/data.json')
 
 function addClick(clothes_data) {
 	// 쿼리 실렉터로 nav의 버튼들의 node를 받아온다
-	let sortingButton = document.querySelectorAll('.nav__menu-item');
+	let sortingButton = document.querySelectorAll('.nav__item');
 
 	// 클릭 리스너 연결
 	sortingButton.forEach((button) => {
 		button.addEventListener('click', () => {
 			// 클릭 이벤트 발생하면, 기존에 리스트에 있던 옷들을 전부 삭제 후, 새로운 옷들을 더해준다.
-			let item = document.querySelectorAll('.section__item');
+			let item = document.querySelectorAll('.list__item');
 
-			item.forEach((section__item) => {
-				section__item.parentNode.removeChild(section__item);
+			item.forEach((list__item) => {
+				list__item.parentNode.removeChild(list__item);
 			});
 
 			// 새로운 아이템들을 기준에 맞게 정렬해주는 함수
@@ -74,7 +74,7 @@ function sortClothes(clothes_data, standard) {
 // 그려줄 데이터 어레이를 인자로 받음.
 function makeClothesList(sortedArray) {
 	// console.log(array);
-	let clothesList = document.querySelector('.section__list');
+	let clothesList = document.querySelector('.list');
 
 	for (cloth of sortedArray) {
 		let forWhom = cloth.forWhom;
@@ -82,15 +82,16 @@ function makeClothesList(sortedArray) {
 		let imageURI = cloth.imageURI;
 
 		let list = document.createElement('li');
-		list.className = 'section__item';
+		list.className = 'list__item';
 
 		let img = document.createElement('img');
+		img.className = 'list__item-thumbnail';
 		img.src = imageURI;
 
 		list.appendChild(img);
 
-		let detail = document.createElement('div');
-		detail.className = 'section__item-detail';
+		let detail = document.createElement('span');
+		detail.className = 'list__item-detail';
 		let explanation = document.createTextNode(`${forWhom}, ${size} size`);
 		detail.appendChild(explanation);
 

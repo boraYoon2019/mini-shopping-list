@@ -5,34 +5,59 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Online Shopping</title>
 		<link rel="stylesheet" href="style.css" />
-		<script src="src/main.js" defer></script>
+		<script src="src/main_refactoring.js" defer></script>
 	</head>
 	<body>
-		<nav class="nav">
-			<div class="nav__logo">
-				<img src="img/logo.png" />
-			</div>
+		<div class="nav__logo">
+			<img src="img/logo.png" />
+		</div>
 
-			<ul class="nav__menu">
-				<li class="nav__menu-item" id="tshirts">
-					<img src="img/blue_t.png" />
-				</li>
-				<li class="nav__menu-item" id="pants"><img src="img/blue_p.png" /></li>
-				<li class="nav__menu-item" id="skirt"><img src="img/blue_s.png" /></li>
-				<li class="nav__menu-item" id="blue">
-					<button class="btn nav__button-blue">blue</button>
-				</li>
-				<li class="nav__menu-item" id="yellow">
-					<button class="btn nav__button-yellow">yellow</button>
-				</li>
-				<li class="nav__menu-item" id="pink">
-					<button class="btn nav__button-pink">pink</button>
-				</li>
-			</ul>
-		</nav>
+		<ul class="nav__menu">
+			<li class="nav__item" id="tshirts">
+				<img
+					class="btn imgBtn"
+					src="img/blue_t.png"
+					data-key="type"
+					data-value="tshirt"
+				/>
+			</li>
+			<li class="nav__item" id="pants">
+				<img
+					class="btn imgBtn"
+					src="img/blue_p.png"
+					data-key="type"
+					data-value="pants"
+				/>
+			</li>
+			<li class="nav__item" id="skirt">
+				<img
+					class="btn imgBtn"
+					src="img/blue_s.png"
+					data-key="type"
+					data-value="skirt"
+				/>
+			</li>
+			<li class="nav__item" id="blue">
+				<button class="btn textBtn btn-blue" data-key="color" data-value="blue">
+					blue
+				</button>
+			</li>
+			<li class="nav__item" id="yellow">
+				<button
+					class="btn textBtn btn-yellow"
+					data-key="color"
+					data-value="yellow"
+				>
+					yellow
+				</button>
+			</li>
+			<li class="nav__item" id="pink">
+				<button class="btn textBtn btn-pink" data-key="color" data-value="pink">
+					pink
+				</button>
+			</li>
+		</ul>
 
-		<section class="section">
-			<ul class="section__list"></ul>
-		</section>
+		<ul class="list"></ul>
 	</body>
 </html>

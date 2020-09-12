@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Online Shopping</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="src/test.js" defer></script>
+	</head>
+	<body>
+		<div class="nav__logo">
+			<img src="img/logo.png" />
+		</div>
+
+		<ul class="nav__menu">
+			<li class="nav__item" id="tshirts">
+				<img
+					class="btn imgBtn"
+					src="img/blue_t.png"
+					data-key="type"
+					data-value="tshirt"
+				/>
+			</li>
+			<li class="nav__item" id="pants">
+				<img
+					class="btn imgBtn"
+					src="img/blue_p.png"
+					data-key="type"
+					data-value="pants"
+				/>
+			</li>
+			<li class="nav__item" id="skirt">
+				<img
+					class="btn imgBtn"
+					src="img/blue_s.png"
+					data-key="type"
+					data-value="skirt"
+				/>
+			</li>
+			<li class="nav__item" id="blue">
+				<button class="btn textBtn btn-blue" data-key="color" data-value="blue">
+					blue
+				</button>
+			</li>
+			<li class="nav__item" id="yellow">
+				<button
+					class="btn textBtn btn-yellow"
+					data-key="color"
+					data-value="yellow"
+				>
+					yellow
+				</button>
+			</li>
+			<li class="nav__item" id="pink">
+				<button class="btn textBtn btn-pink" data-key="color" data-value="pink">
+					pink
+				</button>
+			</li>
+		</ul>
+
+		<ul class="list"></ul>
+	</body>
+</html>

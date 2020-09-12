@@ -92,6 +92,8 @@ function sortClothes(clothes_data, standard) {
 		default:
 			sortedArray = clothes_data;
 			return makeClothesList(sortedArray);
+		// 보통 스위치문의 default에서는 에러를 던진다
+		// throw new Error('unknown values');
 	}
 
 	// After refactoring > 불필요한 조건 반복 없애고, standard 인자 이용해서 필터링 대상인 데이터와 기준이 맞는지 확인하도록 변경

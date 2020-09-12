@@ -31,11 +31,13 @@ function addClick(clothes_data) {
 			});
 
 			// + 다른 방법: list에 마지막 child나 첫번째 child가 없을 때 까지 반복해서 없애는 로직. firstElementChild can be used.
+			// 가독성 생각해보자~!
+
 			// let list = document.querySelector('.list');
 			// let item = list.lastElementChild;
 			// while (item) {
-			//     e.removeChild(item);
-			//     item = e.lastElementChild;
+			//     list.removeChild(item);
+			//     item = list.lastElementChild;
 			// }
 
 			// 새로운 아이템들을 기준에 맞게 정렬해주는 함수
@@ -56,66 +58,66 @@ function addClick(clothes_data) {
 function sortClothes(clothes_data, standard) {
 	let sortedArray = new Array();
 
-	// switch (standard) {
-	// 	case 'pants':
-	// 		for (cloth of clothes_data) {
-	// 			cloth.product === 'pants' ? sortedArray.push(cloth) : false;
-	// 		}
-	// 		return makeClothesList(sortedArray);
-	// 	case 'skirt':
-	// 		for (cloth of clothes_data) {
-	// 			cloth.product === 'skirt' ? sortedArray.push(cloth) : false;
-	// 		}
-	// 		return makeClothesList(sortedArray);
-	// 	case 'tshirts':
-	// 		for (cloth of clothes_data) {
-	// 			cloth.product === 'tshirts' ? sortedArray.push(cloth) : false;
-	// 		}
-	// 		return makeClothesList(sortedArray);
-	// 	case 'blue':
-	// 		for (cloth of clothes_data) {
-	// 			cloth.color === 'blue' ? sortedArray.push(cloth) : false;
-	// 		}
-	// 		return makeClothesList(sortedArray);
-	// 	case 'yellow':
-	// 		for (cloth of clothes_data) {
-	// 			cloth.color === 'yellow' ? sortedArray.push(cloth) : false;
-	// 		}
-	// 		return makeClothesList(sortedArray);
-	// 	case 'pink':
-	// 		for (cloth of clothes_data) {
-	// 			cloth.color === 'pink' ? sortedArray.push(cloth) : false;
-	// 		}
-	// 		return makeClothesList(sortedArray);
-	// 	default:
-	// 		sortedArray = clothes_data;
-	// 		return makeClothesList(sortedArray);
-	// }
-
-	// After refactoring > 불필요한 조건 반복 없애고, standard 인자 이용해서 필터링 대상인 데이터와 기준이 맞는지 확인하도록 변경
 	switch (standard) {
-		// 기준이 product일 때
 		case 'pants':
+			for (cloth of clothes_data) {
+				cloth.product === 'pants' ? sortedArray.push(cloth) : false;
+			}
+			return makeClothesList(sortedArray);
 		case 'skirt':
+			for (cloth of clothes_data) {
+				cloth.product === 'skirt' ? sortedArray.push(cloth) : false;
+			}
+			return makeClothesList(sortedArray);
 		case 'tshirts':
 			for (cloth of clothes_data) {
-				cloth.product === standard ? sortedArray.push(cloth) : false;
+				cloth.product === 'tshirts' ? sortedArray.push(cloth) : false;
 			}
 			return makeClothesList(sortedArray);
-
-		// 기준이 color일 때
 		case 'blue':
+			for (cloth of clothes_data) {
+				cloth.color === 'blue' ? sortedArray.push(cloth) : false;
+			}
+			return makeClothesList(sortedArray);
 		case 'yellow':
+			for (cloth of clothes_data) {
+				cloth.color === 'yellow' ? sortedArray.push(cloth) : false;
+			}
+			return makeClothesList(sortedArray);
 		case 'pink':
 			for (cloth of clothes_data) {
-				cloth.color === standard ? sortedArray.push(cloth) : false;
+				cloth.color === 'pink' ? sortedArray.push(cloth) : false;
 			}
 			return makeClothesList(sortedArray);
-
 		default:
 			sortedArray = clothes_data;
 			return makeClothesList(sortedArray);
 	}
+
+	// After refactoring > 불필요한 조건 반복 없애고, standard 인자 이용해서 필터링 대상인 데이터와 기준이 맞는지 확인하도록 변경
+	// switch (standard) {
+	// 	// 기준이 product일 때
+	// 	case 'pants':
+	// 	case 'skirt':
+	// 	case 'tshirts':
+	// 		for (cloth of clothes_data) {
+	// 			cloth.product === standard ? sortedArray.push(cloth) : false;
+	// 		}
+	// 		return makeClothesList(sortedArray);
+
+	// 	// 기준이 color일 때
+	// 	case 'blue':
+	// 	case 'yellow':
+	// 	case 'pink':
+	// 		for (cloth of clothes_data) {
+	// 			cloth.color === standard ? sortedArray.push(cloth) : false;
+	// 		}
+	// 		return makeClothesList(sortedArray);
+
+	// 	default:
+	// 		sortedArray = clothes_data;
+	// 		return makeClothesList(sortedArray);
+	// }
 }
 
 // 화면에 옷 리스트들을 그려주는 함수
@@ -123,6 +125,9 @@ function sortClothes(clothes_data, standard) {
 // self-feeback :
 // 직접 element를 만들어서 넣었다가, 지웠다가 하는건 직접 돔 조작이랑 다를바 없음.. 지양하자
 // for 문 내에서 선언될 필요가 없는 변수들은 for문 밖으로 빼서 반복 선언할당 줄이자.
+//  >> 테스트 결과 새로운 요소에 더해주는 것이 아니라 기존의 요소에 계속해서 더해주는 것이기 때문에 하나의 아이템에 계속 추가되는 현상 발생 확인함
+// 수정한 코드 하단 첨부
+
 function makeClothesList(sortedArray) {
 	// console.log(array);
 	const clothesList = document.querySelector('.list');
@@ -152,4 +157,32 @@ function makeClothesList(sortedArray) {
 
 		clothesList.appendChild(list);
 	}
+
+	// after edit
+	// function makeClothesList(sortedArray) {
+	//   const clothesList = document.querySelector('.list');
+
+	//   const listClassName = 'list__item';
+	//   const imgClassName = 'list__item-thumbnail';
+	//   const detailClassName = 'list__item-detail';
+
+	//   for (cloth of sortedArray) {
+	//     const list = document.createElement('li');
+	//     list.className = listClassName;
+
+	//     const img = document.createElement('img');
+	//     img.className = imgClassName;
+	//     img.src = cloth.imageURI;
+	//     list.appendChild(img);
+
+	//     const detail = document.createElement('span');
+	//     detail.className = detailClassName;
+	//     const explanation = document.createTextNode(
+	//       `${cloth.forWhom}, ${cloth.size} size`
+	//     );
+	//     detail.appendChild(explanation);
+	//     list.appendChild(detail);
+
+	//     clothesList.appendChild(list);
+	//   }
 }
